@@ -7,8 +7,9 @@ import java.util.Optional;
 public interface FuncionarioService {
     Optional<Funcionario> getFuncionarioById(Integer id);
     void deleteAllFuncionarios();
+    void deleteFuncionarioById(Integer id);
     void updateFuncionarioById(Integer id,Funcionario funcionario);
-    void insertAluno(Funcionario funcionario);
+    void insertFuncionario(Funcionario funcionario);
     List<Funcionario> getAllFuncionarios();
     Optional<Funcionario> getAllFuncionarioByVacina(Integer IdVacina);
 }

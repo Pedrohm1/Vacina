@@ -24,15 +24,22 @@ public class FuncionarioImpl implements FuncionarioService {
     }
 
     @Override
+    public void deleteFuncionarioById(Integer id){
+        funcionarioRepository.deleteById(id);
+    }
+
+    @Override
     public void updateFuncionarioById(Integer id, Funcionario funcionario) {
         Optional<Funcionario> getFuncionario = getFuncionarioById(id);
         getFuncionario.get().setNome(funcionario.getNome());
+        getFuncionario.get().setCpf(funcionario.getCpf());
         getFuncionario.get().setEmail(funcionario.getEmail());
+        getFuncionario.get().setPermissao(funcionario.getPermissao());
         funcionarioRepository.save(funcionario);
     }
 
     @Override
-    public void insertAluno(Funcionario funcionario) {funcionarioRepository.save(funcionario);
+    public void insertFuncionario(Funcionario funcionario) {funcionarioRepository.save(funcionario);
     }
 
     @Override
