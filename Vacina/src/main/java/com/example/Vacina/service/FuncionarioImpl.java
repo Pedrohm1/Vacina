@@ -3,10 +3,12 @@ import com.example.Vacina.model.Funcionario;
 import com.example.Vacina.repository.FuncionarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service("funcionarioService")
 public class FuncionarioImpl implements FuncionarioService {
 
     @Qualifier("funcionarioRepository")

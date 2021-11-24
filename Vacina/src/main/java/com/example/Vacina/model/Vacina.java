@@ -3,8 +3,12 @@ package com.example.Vacina.model;
 import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import java.util.Date;
 
+@Entity
 public class Vacina {
 
     @javax.persistence.Id
@@ -47,6 +51,6 @@ public class Vacina {
     }
 
     public void setFuncionarios(Funcionario funcionarios) {
-        this.funcionarios = funcionarios;
+       this.funcionarios = funcionarios;
     }
 }
